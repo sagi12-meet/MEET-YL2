@@ -1,0 +1,2 @@
+first time writing here.
+I changed action="movies/addmovie" to action="movies/addcomment" so it would call another action

@@ -19,6 +19,7 @@
 
     <!-- include custom content on each page -->
     {% block content %}
+
     {% endblock %}
 </body>
 </html>

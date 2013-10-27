@@ -3,3 +3,17 @@
 	<!-- importing the movies_list.css stylesheet using the STATIC_URL tag -->
 	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/movie.css">
 {% endblock %}
+{% block content %}
+{{ movie.title }} <br>
+<br>
+<br>
+add comment:<br>
+<br>
+<form action="movies/(?P<movie_id>\d+)/addcomment" method="post">
+{% csrf_token %}
+Comment: <input type="text" name="comment_text"><br>
+<input type="submit" value="Add">
+</form>
+
+{% endblock %}
+

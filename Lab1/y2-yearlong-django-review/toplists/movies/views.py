@@ -21,8 +21,10 @@ def add_movie(request):
 
 def movie(request, movie_id):
     movie_object = Movie.objects.filter(id=movie_id)
-    context = {'movie': movie_object}
+    context = {'movie': movie_object[0]}
     return render(request, 'movies/movie.html', context)
 
 def add_comment(request, movie_id):
-    return HttpResponse("adding comment to movie " + movie_id)
+	newcom=Comment(text=request.POST['comment_text'],movie=Movie.objects.filter(id=movie_id))
+	newcom.save()
+    	return HttpResponse("adding comment to movie " + movie_id)
