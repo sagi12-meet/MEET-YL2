@@ -9,11 +9,26 @@
 <br>
 add comment:<br>
 <br>
-<form action="movies/(?P<movie_id>\d+)/addcomment" method="post">
+<form action="addcomment" method="post">
 {% csrf_token %}
 Comment: <input type="text" name="comment_text"><br>
 <input type="submit" value="Add">
 </form>
+<br>
+<br>
+{% if comments %}
+	List of all Comments: 
+	<ul>
+	<!-- taking each movie in the movies_list one at a time -->
+	{% for comment in comments %}
+		<!-- link to each movie and display it's title -->
+		<!-- the id number is the unique number given by Django to each movie -->
+		1<br>
+	{% endfor %}
+	</ul>
+{% else %}
+	<p>There are no comments yet. </p>
+{% endif %}
 
 {% endblock %}
 
