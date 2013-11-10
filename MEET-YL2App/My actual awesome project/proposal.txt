@@ -1,0 +1,1 @@
+My project is going to be a maze game. You have a ball on the screen and by turning the phone you move the ball in the maze to the hole. If you get there, you win the game.
