@@ -1,0 +1,3 @@
+Good job with the project. I’m glad you were able to take your knowledge of Java / Python and translate it into being able to make functional C++ code. I would have liked to see more of your use of Github and solving some of your own problems using Google. I have not had the chance to look exactly at your code yet, but from the demo it looked good. 
+
+One thing I would suggest is actually displaying to the user what number your program thought it was detecting - giving more user feedback is always a good idea. 
